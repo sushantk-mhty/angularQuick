@@ -1,0 +1,12 @@
+<div class="page-area">
+    <div class="text-center">
+        <h2>Blogs</h2>
+        <input type="text" placeholder="Input here..." #txtval>
+        <button (click)="submitValue(txtval)">Submit Value</button>
+        <app-comp5 *ngIf="comp5Exist" [myValue]="value"> ngContent : {{value}}</app-comp5>
+        <br>
+        <br>
+        <button class="btn btn-danger" (click)="btnDestroy()">Destroy Component</button>
+    </div>
+    </div>
+

@@ -1,0 +1,64 @@
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-10">
+            <table class="table">
+              <thead class="table-dark">
+               <tr>
+                <td>Sr #</td>
+                <td>Product Id </td>
+                <td>Product Name </td>
+                <td>Product Price </td>
+                <td>Product Image </td>
+                <td>Remove</td>
+               </tr>
+             </thead>
+          <tbody>
+            <tr *ngFor="let myPro of products; index as i">
+              <td>{{i+1}}</td>
+              <td>{{myPro.id}} </td>
+                <td>{{myPro.name}} </td>
+                <td>{{myPro.price}}</td>
+                <td><img src="{{myPro.proimg}} " width="70" alt="" ></td>
+                <td><button class="btn btn-danger" (click)="btnRemoveProduct(i)">Remove</button></td>
+               </tr>
+          </tbody>
+           </table>
+        </div>
+    </div>
+    <hr>
+</div>
+<br>
+<div class="container">
+  <hr>
+  <div class="row">
+    <div class="col-md-3">
+      <input type="text" name="" class="form-control" #uname placeholder="User Name">
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-success" (click)="btnCreateUser(uname)">Create User</button>
+    </div>
+    <div class="col-md-3">
+      <button class="btn btn-danger" (click)="btnRemoveUser()">Remove User</button>
+    </div>
+  </div>
+  <br><br>
+  <div class="row">
+    <div class="col-md-10">
+      <table class="table">
+        <thead class="table-dark">
+          <tr>
+            <th>UserName</th>
+            <th>Remove</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; index as i">
+            <td>{{user.name}}</td>
+            <td><button class="btn btn-danger" (click)="onRemoveItem(i)">Remove item</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

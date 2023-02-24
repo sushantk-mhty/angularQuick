@@ -1,0 +1,26 @@
+<div class="page-area">
+    <div class="text-center">
+        <h2>Events</h2>
+        <p>{{Loremipsum}}</p>
+        <h4>{{value | uppercase}}</h4> <br>
+        <h4>{{value | lowercase}}</h4> <br>
+        <h4>{{value | titlecase}}</h4> <br>
+        <h4>{{date | date}}</h4><br>
+        <h4>{{date | date:'short'}}</h4><br>
+        <h4>{{date | date:'medium'}}</h4><br>
+        <h4>{{date | date:'fullDate'}}</h4><br>
+        <h4>{{date | date:'fullDate' | uppercase}}</h4><br>
+        <h4>{{value}}</h4> <br>
+        <h4>{{value | slice :2}}</h4> <br>
+        <h4>{{value | slice :2:7}}</h4> <br>
+    </div>
+    <hr>
+    <div class="text-left">
+        <ul>
+            <li *ngFor="let name of nameArr">
+                {{name | uxpipe : 5}}
+            </li>
+        </ul>
+        </div>  
+        <hr>
+    </div>

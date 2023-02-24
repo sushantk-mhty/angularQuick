@@ -1,0 +1,39 @@
+<div class="page-area">
+    <div class="text-center">
+        <h2>Content</h2>
+        <p>{{boxMessage}}</p>
+        <!-- <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p> -->
+    </div>
+    <div #box>
+        <h1> User Name is <span class="text-success">{{userName}}</span></h1>
+    </div>
+    <div class="row">
+        <div class="col-md-6 py-2">
+            <button (click)="changeChildProperty()">Change Child Property</button> &nbsp;
+            
+            <button (click)="callChildMethod()">Call Child Method</button>
+
+            <div class="custom-dropdown">
+                <span class="dropdown-header" appDropdown>
+                    My Dropdown
+                </span>
+                <div class="dropdown-content">
+                    <a href="">Item 1</a>
+                    <a href="">Item 2</a>
+                    <a href="">Item 3</a>
+                    <a href="">Item 4</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6 py-2">
+            <app-comp6>
+                <p #childCont> This is ng content paragraph</p>
+            </app-comp6>
+        </div>
+        <div class="col-md-6 py-2">
+        </div>
+        <div class="col-md-6 py-2">
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,29 @@
+<p>eventbind works!</p>
+<br>
+<br>
+<button class="btn btn-red" (click)="onAddCart()">Add to Cart</button>
+<br>
+<br>
+<div class="clear"></div>
+<p class="txtFormat">{{msg}}</p>
+
+<br>
+<br>
+
+<input type="text" value="myinputtext" (click)="onInputClick($event)" title="eventbind">
+
+<br>
+<br>
+
+
+<button class="btn btn-red" value="Laptop" (click)="onBtnClick($event)">Laptop</button>
+<button class="btn btn-red" value="TV" (click)="onBtnClick($event)">TV</button>
+<button class="btn btn-red" value="WashingMachine" (click)="onBtnClick($event)">WashingMachine</button>
+<br>
+<br>
+<div class="clear"></div>
+<p class="txtFormat">{{msgData}}</p>
+
+<div class="clear"></div><hr>
+<input #inputInfo type="text" value="Uxtrendz" name="Anup" title="temp">
+<button (click)="getInputInfo(inputInfo)">Get Info</button>

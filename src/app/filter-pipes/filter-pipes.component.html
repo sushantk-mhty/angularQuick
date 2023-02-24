@@ -1,0 +1,49 @@
+<div class="page-area">
+    <div>
+        <h2>Filter-Pipes</h2>
+        <p>{{Loremipsum}}</p>
+    </div>
+    <form>
+      <div class="row mb-2">
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Add Product" #addItem>
+        </div>
+        <div class="col">
+          <input type="text" class="form-control" placeholder="Add Price" #addItemPrice>
+        </div>
+        <div class="col">
+          <button type="button" class="btn btn-success" (click)="onAddProduct(addItem,addItemPrice)">Add Product</button>
+        </div>
+      </div>
+    </form>
+  <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="form-group">
+                    <input type="text" class="form-control" id="txtsearchproduct"  
+                    placeholder="Enter Product Name" [(ngModel)]="nameSearch">
+                  </div>
+            </div>
+            <div class="col-md-8">
+        <table class="table my-2">
+            <thead class="table-dark">
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Product Name</th>
+                <th scope="col">Latest Price</th>
+                <th scope="col">Availability</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of productArr | filter : nameSearch ">
+                <th scope="row">{{product.sno}}</th>
+                <td>{{product.name}}</td>
+                <td>{{product.price}}</td>
+                <td><h5><span class="badge bg-dark">{{product.availability}} </span></h5></td>
+              </tr>
+             
+            </tbody>
+          </table>
+            </div>
+ </div>
+   </div>
+
